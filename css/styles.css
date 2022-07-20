@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 15px;
+    color: var(--Grayish-Blue);
+    font-family: 'Poppins', sans-serif;
+    --Red: rgb(234, 83, 83);
+    --Cyan: rgb(69, 211, 211);
+    --Orange: rgb(252, 175, 74);
+    --Blue: rgb(84, 158, 242);
+
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+   
+   
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourCard {
+    margin: 2rem;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.fourCard__title {
+    color: var(--Very-Dark-Blue);
+    font-size: 2.5rem;
+}
+
+.fourCard__title span {
+    font-weight: 200;
+}
+.fourCard__paragraph {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.fourCard__gridArea {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    ".          team          ."
+    "supervisor team calculator"
+    "supervisor karma calculator"
+    ".          karma          .";
+}
+
+.container {
+    border-radius:.5rem;
+    box-shadow: 0 4px 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.fourCard__supervisorContainer{
+    border-top: 4px solid var(--Cyan);
+}
+.fourCard__teamBuilderContainer{
+    border-top: 4px solid var(--Red);
+}
+.fourCard__calculatorContainer{
+    border-top: 4px solid var(--Blue);
+}
+.fourCard__karmaContainer{
+    border-top: 4px solid var(--Orange);
+}
+.imgContainer {
+    
+    margin: 2rem;
+    display: flex;
+    justify-content: end;
+}
+.gridText {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.gridTitle {
+    color: var(--Very-Dark-Blue);
+    font-size: 1.3rem;
+}
+.gridParagraph {
+    font-size: .8rem;
+    color: var(--Grayish-Blue);
+}
+
+.fourCard__supervisorContainer {
+    grid-area: supervisor;
+}
+.fourCard__teamBuilderContainer {
+    grid-area: team;
+}
+.fourCard__calculatorContainer {
+    grid-area: calculator;
+}
+.fourCard__karmaContainer {
+    grid-area: karma;
+}
+
+@media (max-width:920px) {
+    .fourCard__gridArea {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "supervisor supervisor supervisor"
+        "team          team          team"
+        "karma          karma          karma"
+        "calculator calculator calculator";
+    }
+    
+.fourCard__title {
+    color: var(--Very-Dark-Blue);
+    font-size: 1.5rem;
+}
+
+}
+
