@@ -122,6 +122,7 @@ body {
 
 @media (max-width:920px) {
     .fourCard__gridArea {
+        margin-bottom: 4rem;
         display: grid;
         gap: 2rem;
         grid-template-columns: 1fr 1fr 1fr;
